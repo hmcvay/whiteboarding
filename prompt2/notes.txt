@@ -10,10 +10,12 @@ Output: [7, 9, "hi", 12, 53]
 ----------------------------------------------------------
 WITHOUT .FILTER()
 
-//loop through array, compare array[i] == other indexes
-// x = "other index" starting at array.lenght -1
-//if array[i] IS equal do not push to result
-//if array[i] IS NOT equal, push to result
+//thought about looping but it would be a series of nested for/while loops to keep i=0 locked comparing to x which would increment through rest of values.
+
+// Set
+
+// a "Set" in js will take your variable and filter out only unique chars/nums/nans/etc and return a new object (set) of those unique chars
+
 
 --there will be ints and Strings
 --there will be neg numbers?
@@ -22,13 +24,21 @@ WITHOUT .FILTER()
 
 let nums = [7,9,"hi",12,"hi", 7, 53];
 
-function arrayDedup(nums) {
-  let result = [];
-  for (let i = 0; i=nums.length; i++) {
-    x = nums.length-1
-    if(nums[i] > 0) {
-      result.push(nums[i])
-    }
-    return result;
-  }
+let uniqueNums = new Set(nums); 
+
+//that will return a set as an object, so you will need to use spread operator within [ ]
+
+let uniqueNums = [...new Set(nums)];
+
+
+----------------------------------------------------------
+WITH FILTER
+
+let nums = [7,9,"hi",12,"hi", 7, 53];
+
+function uniqueArray(nums) {
+  return nums.filter((item, index) => nums.indexOf(item) === index);
 }
+
+
+
