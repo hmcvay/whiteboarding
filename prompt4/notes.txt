@@ -9,3 +9,28 @@ Output: false
 Input: "copyright"
 
 Output: true
+
+--------------------------------------
+
+//going to need to compare each character to each other to see if it's == or !==
+// 
+
+function unique(input) {
+  let x = input.length -1;
+  let i=0;
+  while(i<input.length){
+
+    while(i<x) {
+      if(i !== x) {
+        x--
+      }
+      else {
+        return false
+      }
+      
+
+      }
+    }
+  }
+  
+}
