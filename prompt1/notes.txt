@@ -7,3 +7,29 @@ Example
 Input: "Jasmine Ann Jones"
 
 Output: "Jasmine%20Ann%20Jones"
+
+----------------------------------------------------------
+
+//take input and .split to array
+// loop through array and push index that IS NOT empty ' '
+// if empty ' ', push "%20"
+// take the array.join(") to get rid of commas, and .toSTring() for string type result
+
+----------------
+
+let input = "Jasmine Ann Jones";
+let output = [];
+
+function replaceSpace(input) {
+  let inputArray = input.split("");
+  for(let i=0; i<inputArray.length; i++) {
+    if(inputArray[i] !== " ") {
+      output.push(inputArray[i]);
+    }
+    else{
+      output.push("%20");
+    }
+  }
+  let result = output.join("").toString();
+  return result;
+}
