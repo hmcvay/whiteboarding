@@ -11,6 +11,5 @@ function unique(input) {
       }
     } 
   }
-  return true;
 }
   
